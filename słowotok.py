@@ -8,12 +8,18 @@ import random
 #for i in my_array:
 #    print(i)
 
+def slowo(X,Y,tab,n):
+    sl=''
+    for i in range(n):
+        sl=sl+tab[X[i]][Y[i]]
+    return sl
+'''
 def slowo3(X,Y,tab):
     return (tab[Y[0]][X[0]]+tab[Y[1]][X[1]]+tab[Y[2]][X[2]])
 
 def slowo4(X,Y,tab):
     return (tab[Y[0]][X[0]]+tab[Y[1]][X[1]]+tab[Y[2]][X[2]]+tab[Y[3]][X[3]])
-
+'''
 
 #%% Collect letters from polish language
 chr_n=[211, 260, 262, 280, 321, 323, 346, 377, 379]
@@ -24,7 +30,7 @@ for i in range (65,91):
 #    print(chr(i))
     
 #%% Generate artificial letter matrix
-matrix=[[chr(chr_n[random.randint(0, 35)]) for i in range(4)] for j in range(4)]
+matrix=[[chr(chr_n[random.randint(0, 34)]) for i in range(4)] for j in range(4)]
 
 #for i in matrix:
 #    print(i)
@@ -84,7 +90,7 @@ for x0 in range(4):
                             y=[y0,y1,y2]
                             #print(x,y)
                             try:
-                                slowa.append(slowo3(x,y,matrix))
+                                slowa.append(slowo(x,y,matrix,3))
                             except Exception:
                                 pass
 
@@ -121,7 +127,7 @@ for x0 in range(4):
                                     y=[y0,y1,y2,y3]
                                     #print(x,y)
                                     try:
-                                        slowa.append(slowo4(x,y,matrix))
+                                        slowa.append(slowo(x,y,matrix,4))
                                     except Exception:
                                         pass
 
