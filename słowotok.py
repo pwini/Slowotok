@@ -131,6 +131,48 @@ for x0 in range(4):
                                     except Exception:
                                         pass
 
+for x0 in range(4):
+    for y0 in range(4):
+        for i1 in range(3):
+            for j1 in range(3):
+                for i2 in range(3):
+                    for j2 in range(3):
+                        for i3 in range(3):
+                            for j3 in range(3):
+                                for i4 in range(3):
+                                    for j4 in range(3):
+                                        x1=x0+i1-1
+                                        y1=y0+i1-1
+                                        x2=x1+i2-1
+                                        y2=y1+j2-1
+                                        x3=x2+i3-1
+                                        y3=y2+j3-1
+                                        x4=x3+i4-1
+                                        y4=y3+j4-1
+                                        if ((x0>=0) & (y0>=0) & \
+                                            (x1>=0) & (y1>=0) & \
+                                            (x2>=0) & (y2>=0) & \
+                                            (x3>=0) & (y3>=0) & \
+                                            (x4>=0) & (y4>=0) & \
+                                            (not ((x0==x1) & (y0==y1))) & \
+                                            (not ((x0==x2) & (y0==y2))) & \
+                                            (not ((x0==x3) & (y0==y3))) & \
+                                            (not ((x0==x4) & (y0==y4))) & \
+                                            (not ((x1==x2) & (y1==y2))) & \
+                                            (not ((x1==x3) & (y1==y3))) & \
+                                            (not ((x1==x4) & (y1==y4))) & \
+                                            (not ((x2==x3) & (y2==y3))) & \
+                                            (not ((x2==x4) & (y2==y4))) & \
+                                            (not ((x3==x4) & (y3==y4))) \
+                                            ):
+                                            x=[x0,x1,x2,x3,x4]
+                                            y=[y0,y1,y2,y3,y4]
+                                            #print(x,y)
+                                            try:
+                                                slowa.append(slowo(x,y,matrix,5))
+                                            except Exception:
+                                                pass
+
 print(slowa)
 for ll in matrix:
     print(ll)
